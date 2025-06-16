@@ -7,7 +7,7 @@ class add{
     }
 }
 
-//another way to add
+//another (syntax) way to add
 
 class addition{
     public static void main(String arr[]){
@@ -83,6 +83,16 @@ class divide{
     }
 }
 
+
+//another way to divide
+
+class divide1{
+    public static void main(String arr[]){
+        int a = 58;
+        a /= 2;
+        System.out.println(a);
+    }
+}
 
 
 class modular{
