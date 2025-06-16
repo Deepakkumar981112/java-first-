@@ -17,7 +17,14 @@ class addition{
          System.out.println(a);
     }
 }
+class add1{
+    public static void main(String arr[]){
 
+        int a = 2;
+        a++;
+         System.out.println(a);
+    }
+}
 
 
 
@@ -42,6 +49,14 @@ class subtract{
     }
 }
 
+class subtract1{
+    public static void main(String arr[]){
+
+        int a = 2;
+        a--;
+         System.out.println(a);
+    }
+}
 
 //another way to substract
 
@@ -103,6 +118,8 @@ class modular{
         System.out.println(c = (a%b));
     }
 }
+
+
 
 
 
