@@ -88,7 +88,6 @@ class conditionalStatement3 {
     }
 }
 
-
 // Q) Write a Java program using nested ternary operator to check if a number
 // is:
 // Even & Positive → Print "Even and Positive"
@@ -107,8 +106,136 @@ class conditionalStatement4 {
                         : (num % 2 == 1 && num >= 0) ? "even and positive"
                                 : (num % 2 == 1 && num <= 0) ? "even and negative" : "zero";
 
-
-                System.out.println("the number is " + result);
+        System.out.println("the number is " + result);
 
     }
 }
+
+// Switch Statement
+
+// Q1) Write a program to print the day name when given a number (1–7).
+// Input: 3
+// Output: Wednesday
+
+class week {
+    public static void main(String[] args) {
+        System.out.print("Enter day");
+        Scanner sc = new Scanner(System.in);
+        int day = sc.nextInt();
+
+        switch (day) {
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Wednesday");
+                break;
+            case 5:
+                System.out.println("Thrusday");
+                break;
+            case 6:
+                System.out.println("Friday");
+                break;
+            case 7:
+                System.out.println("Saturday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+}
+
+// Q2) Write a program to perform a basic calculator using switch-case.
+// Input: a = 10, b = 5, op = '+'
+// Output: 15
+
+class calculator {
+    public static void main(String[] args) {
+
+ Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number :");
+         int a = sc.nextInt();
+        System.out.print("Enter a another number :");
+         int b = sc.nextInt();
+        System.out.print("Enter a Operation :");
+         String op = sc.next();
+
+        switch (op) {
+            case ("+"):
+                System.out.print(a+b);
+            case ("-"):
+                System.out.print(a-b);
+            case ("*"):
+                System.out.print(a*b);
+            case ("/"):
+                if (b != 0)
+                    System.out.println(a/b);
+                else if(a == 0){
+                    System.out.println("zero cannot be divided");
+                }
+                else
+                    System.out.println("Cannot divide by zero");
+                break;
+        }
+    }
+}
+
+
+
+
+
+//Q3. Write a program to return the number of days in a given month number (1–12). Handle February with "28 or 29 days"
+
+
+class months {
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int monthnumber = sc.nextInt();
+
+        switch(monthnumber){
+            case 1 : case 3 : case 5 : case 7 : case 8: case 10 : case 12 : System.out.print("31 days"); break;
+            
+             case 4: case 6: case 9: case 11: System.out.print("30 days "); break;
+
+             case 2: System.out.print("28 or 29 days"); break;
+
+             default: System.out.print("Invalid month number");
+        }
+
+    }
+}
+
+
+
+
+
+// new switch sytax 
+
+
+
+class newswitch {
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a day that u want to check alarm time - ");
+        String day = sc.nextLine();
+
+        String result = switch(day){
+            case "sunday" , "saturday" -> "8am";
+            case "monday" , "tuesday" , "wednesday" , "Thrusday" , "friday"-> "7am" ;
+            default -> "Enter valid day";
+        };
+        System.out.println("Alarm is set at "+ result );
+    }
+}
+
